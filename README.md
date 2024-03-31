@@ -8,19 +8,19 @@ As with all approaches to causal inference on non-experimental data, valid concl
 
 #### Try it out in the browser
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yaseenesmaeelpour/pycausalimpact/HEAD?labpath=GettingStarted.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yaseenesmaeelpour/causalimpactx/HEAD?labpath=GettingStarted.ipynb)
 
 #### Installation
 
 install the latest release via pip
 
 ```bash
-pip install py-causalimpact
+pip install causalimpactx
 ```
 
 #### Getting started
 
-[Documentation and examples](https://nbviewer.org/github/yaseenesmaeelpour/pycausalimpact/blob/master/GettingStarted.ipynb)
+[Documentation and examples](https://nbviewer.org/github/yaseenesmaeelpour/causalimpactx/blob/master/GettingStarted.ipynb)
 
 #### Further resources
 
@@ -28,4 +28,4 @@ pip install py-causalimpact
 
 #### Bugs
 
-The issue tracker is at https://github.com/yaseenesmaeelpour/pycausalimpact/issues. Please report any bugs that you find. Or, even better, fork the repository on GitHub and create a pull request.
+The issue tracker is at https://github.com/yaseenesmaeelpour/causalimpactx/issues. Please report any bugs that you find. Or, even better, fork the repository on GitHub and create a pull request.

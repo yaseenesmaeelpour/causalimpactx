@@ -4,7 +4,7 @@ requires = ["setuptools>=46.1.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "py-causalimpact"
+name = "causalimpactx"
 version = "1.0.0"
 authors = [
   { name="Yaseen Esmaeelpour", email="yaseenes@gmail.com" },
@@ -17,7 +17,13 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+  "pandas",
+  "numpy",
+  "scipy",
+  "pytensor",
+]
 
 [project.urls]
-Homepage = "https://github.com/yaseenesmaeelpour/pycausalimpact"
-Issues = "https://github.com/yaseenesmaeelpour/pycausalimpact/issues"
+Homepage = "https://github.com/yaseenesmaeelpour/causalimpactx"
+Issues = "https://github.com/yaseenesmaeelpour/causalimpactx/issues"
