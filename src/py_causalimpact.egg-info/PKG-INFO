@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: py-causalimpact
+Version: 1.0.0
+Summary: A clone of R version CausalImpact developed by Google
+Author-email: Yaseen Esmaeelpour <yaseenes@gmail.com>
+Project-URL: Homepage, https://github.com/yaseenesmaeelpour/pycausalimpact
+Project-URL: Issues, https://github.com/yaseenesmaeelpour/pycausalimpact/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+License-File: AUTHORS.md
+
 #### A Python package for causal inference using Bayesian structural time-series models
 
 This is a port of the R package CausalImpact, see: https://github.com/google/CausalImpact.

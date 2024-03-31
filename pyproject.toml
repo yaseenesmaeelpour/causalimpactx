@@ -1,14 +1,23 @@
 [build-system]
 # AVOID CHANGING REQUIRES: IT WILL BE UPDATED BY PYSCAFFOLD!
-requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5", "wheel"]
+requires = ["setuptools>=46.1.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools_scm]
-# For smarter version schemes and other configuration options,
-# check out https://github.com/pypa/setuptools_scm
-version_scheme = "no-guess-dev"
+[project]
+name = "py-causalimpact"
+version = "1.0.0"
+authors = [
+  { name="Yaseen Esmaeelpour", email="yaseenes@gmail.com" },
+]
+description = "A clone of R version CausalImpact developed by Google"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 
-[tool.commitizen]
-name = "cz_conventional_commits"
-version = "0.2.5"
-tag_format = "v$version"
+[project.urls]
+Homepage = "https://github.com/yaseenesmaeelpour/pycausalimpact"
+Issues = "https://github.com/yaseenesmaeelpour/pycausalimpact/issues"
