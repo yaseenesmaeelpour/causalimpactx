@@ -708,6 +708,12 @@ class CausalImpact:
         print("\n")
         print(textwrap.fill(stmt5, width=width))
 
+    def format_number(self, value):
+        if isinstance(value, float):
+            return "{:.2f}".format(value)
+        else:
+            return int(value)
+
     def summary(self, output="summary", width=120, path=None):
         """reports a summary of the results
 
@@ -733,37 +739,37 @@ class CausalImpact:
         post_point_lower = post_inf.loc[:, "point_pred_lower"]
 
         mean_resp = post_point_resp.mean()
-        mean_resp_fmt = int(mean_resp)
+        mean_resp_fmt = self.format_number(mean_resp)
         cum_resp = post_point_resp.sum()
-        cum_resp_fmt = int(cum_resp)
+        cum_resp_fmt = self.format_number(cum_resp)
         mean_pred = post_point_pred.mean()
-        mean_pred_fmt = int(post_point_pred.mean())
+        mean_pred_fmt = self.format_number(post_point_pred.mean())
         cum_pred = post_point_pred.sum()
-        cum_pred_fmt = int(cum_pred)
+        cum_pred_fmt = self.format_number(cum_pred)
         mean_lower = post_point_lower.mean()
-        mean_lower_fmt = int(mean_lower)
+        mean_lower_fmt = self.format_number(mean_lower)
         mean_upper = post_point_upper.mean()
-        mean_upper_fmt = int(mean_upper)
+        mean_upper_fmt = self.format_number(mean_upper)
         mean_ci_fmt = [mean_lower_fmt, mean_upper_fmt]
         cum_lower = post_point_lower.sum()
-        cum_lower_fmt = int(cum_lower)
+        cum_lower_fmt = self.format_number(cum_lower)
         cum_upper = post_point_upper.sum()
-        cum_upper_fmt = int(cum_upper)
+        cum_upper_fmt = self.format_number(cum_upper)
         cum_ci_fmt = [cum_lower_fmt, cum_upper_fmt]
 
         abs_effect = (post_point_resp - post_point_pred).mean()
-        abs_effect_fmt = int(abs_effect)
+        abs_effect_fmt = self.format_number(abs_effect)
         cum_abs_effect = (post_point_resp - post_point_pred).sum()
-        cum_abs_effect_fmt = int(cum_abs_effect)
+        cum_abs_effect_fmt = self.format_number(cum_abs_effect)
         abs_effect_lower = (post_point_resp - post_point_lower).mean()
-        abs_effect_lower_fmt = int(abs_effect_lower)
+        abs_effect_lower_fmt = self.format_number(abs_effect_lower)
         abs_effect_upper = (post_point_resp - post_point_upper).mean()
-        abs_effect_upper_fmt = int(abs_effect_upper)
+        abs_effect_upper_fmt = self.format_number(abs_effect_upper)
         abs_effect_ci_fmt = [abs_effect_lower_fmt, abs_effect_upper_fmt]
         cum_abs_lower = (post_point_resp - post_point_lower).sum()
-        cum_abs_lower_fmt = int(cum_abs_lower)
+        cum_abs_lower_fmt = self.format_number(cum_abs_lower)
         cum_abs_upper = (post_point_resp - post_point_upper).sum()
-        cum_abs_upper_fmt = int(cum_abs_upper)
+        cum_abs_upper_fmt = self.format_number(cum_abs_upper)
         cum_abs_effect_ci_fmt = [cum_abs_lower_fmt, cum_abs_upper_fmt]
 
         rel_effect = abs_effect / mean_pred * 100
