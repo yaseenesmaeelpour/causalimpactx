@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 from pandas.api.types import is_list_like
 
-from causalimpact.misc import standardize_all_variables, df_print, get_matplotlib
-from causalimpact.model import construct_model, model_fit
-from causalimpact.inferences import compile_inferences
+from causalimpactx.misc import standardize_all_variables, df_print, get_matplotlib
+from causalimpactx.model import construct_model, model_fit
+from causalimpactx.inferences import compile_inferences
 import scipy.stats as st
 
 
@@ -181,11 +181,11 @@ class CausalImpact:
         if isinstance(data.index, pd.core.indexes.datetimes.DatetimeIndex):
             pre_period = [pd.to_datetime(date) for date in pre_period]
             post_period = [pd.to_datetime(date) for date in post_period]
-            pd.core.dtypes.common.is_datetime_or_timedelta_dtype(pre_period)
+            pd.core.dtypes.common.is_datetime64_dtype(pre_period)
         # if index is not datetime then error if datetime pre and post is passed
-        elif pd.core.dtypes.common.is_datetime_or_timedelta_dtype(
+        elif pd.core.dtypes.common.is_datetime64_dtype(
             pd.Series(pre_period)
-        ) or pd.core.dtypes.common.is_datetime_or_timedelta_dtype(
+        ) or pd.core.dtypes.common.is_datetime64_dtype(
             pd.Series(post_period)
         ):
             raise ValueError(

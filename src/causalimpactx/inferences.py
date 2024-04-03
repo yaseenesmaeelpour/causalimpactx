@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from causalimpact.misc import unstandardize
+from causalimpactx.misc import unstandardize
 
 
 def compile_inferences(

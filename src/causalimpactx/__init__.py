@@ -23,7 +23,7 @@ except PackageNotFoundError:  # pragma: no cover
 finally:
     del version, PackageNotFoundError
 
-from causalimpact.analysis import CausalImpact  # noqa
+from causalimpactx.analysis import CausalImpact  # noqa
 
 __all__ = [
     "CausalImpact",
