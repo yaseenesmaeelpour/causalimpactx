@@ -68,6 +68,10 @@ def compile_inferences(
     point_pred_lower = ci.iloc[:, 0].to_frame()
     point_pred_upper = ci.iloc[:, 1].to_frame()
 
+    #set first element to zero to avoid plot skew
+    point_pred_lower.iloc[0,0] = 0
+    point_pred_upper.iloc[0,0] = 0
+
     response = data.iloc[:, 0]
     response_index = data.index
 
