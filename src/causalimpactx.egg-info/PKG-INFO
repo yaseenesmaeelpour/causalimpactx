@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: causalimpactx
-Version: 0.0.1
+Version: 0.0.2
 Summary: A clone of R version CausalImpact developed by Google
 Author-email: Yaseen Esmaeelpour <yaseenes@gmail.com>
 Project-URL: Homepage, https://github.com/yaseenesmaeelpour/causalimpactx
@@ -16,6 +16,8 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: scipy
 Requires-Dist: pytensor
+Requires-Dist: pymc
+Requires-Dist: statsmodels
 
 #### A Python package for causal inference using Bayesian structural time-series models
 
