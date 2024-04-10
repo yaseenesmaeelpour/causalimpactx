@@ -884,8 +884,8 @@ class CausalImpact:
         # Observation and regression components
         if "original" in panels:
             ax1 = plt.subplot(3, 1, 1)
-            plt.plot(inferences.point_pred, "r--", linewidth=2, label="model")
-            plt.plot(inferences.response, "k", linewidth=2, label="endog")
+            plt.plot(inferences.point_pred, "r--", linewidth=2, label="Prediction")
+            plt.plot(inferences.response, "k", linewidth=2, label="Actual")
 
             plt.axvline(data_inter, c="k", linestyle="--")
 
