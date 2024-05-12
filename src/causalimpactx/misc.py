@@ -26,8 +26,8 @@ def standardize_all_variables(data, pre_period, post_period):
     data_sd = data_sd.fillna(1)
 
     data[data != 0] = data[data != 0] / data_sd
-    y_mu = data_mu[0]
-    y_sd = data_sd[0]
+    y_mu = data_mu.iloc[0]
+    y_sd = data_sd.iloc[0]
 
     data_pre = data.loc[pre_period[0] : pre_period[1], :]
     data_post = data.loc[post_period[0] : post_period[1], :]
